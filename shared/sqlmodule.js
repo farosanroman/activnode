@@ -14,8 +14,8 @@ var sqlmodule = {
               console.log('Recordset: ' + JSON.stringify(recordset));
               console.log('Affected: ' + request.rowsAffected);
               var callb={"Recordset":recordset,"Affected":request.rowsAffected}
-              
-              callback(null,recordset.recordsets[0]);
+              //callback(null,{a:1});
+              callback(null,recordset);
               sql.close()
             }).catch(function(err) {
                 callback(null,{error:'Request error: ' + err});
