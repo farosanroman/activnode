@@ -9,7 +9,7 @@ const SQL = require('./shared/sqlmodule');
 
 app.use(express.json())
 app.get('/',(req,res)=>{
-  res.send("ActiBiz v0.0.0")
+  res.send("ActivNode v0.0.0")
   //var ppa=queries.f();
  
 });
