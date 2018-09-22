@@ -1,15 +1,15 @@
-
-var ascii = {
+var asciiqry = {
    
-    asciiprocesar(criteria) {
+    asciiprocesar(TXT) {
         
-        let fs = require('fs');
-        console.log("migrarsql")
-    var TXT = fs.readFileSync(__dirname + "/asscii/ATS16092018.txt", "latin1");
-    console.log(TXT);
+       // let fs = require('fs');
+       // console.log("asciisql")
+    //var TXT = fs.readFileSync(__dirname + "/asscii/ATS16092018.txt", "latin1");
+    
+    //console.log(TXT);
     var lines = TXT.split("\r").join("");
     var lines = lines.split("\n");
-    console.log(lines)
+    //console.log(lines)
     var result = [];
     console.log("lines"+lines.length);
     var sqltran = "", sucursal = "", refe2 = "", proyecto = "", ta = "", modulo = "MIG";
@@ -135,7 +135,7 @@ var ascii = {
     sqltran = sqltran + " RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState ) ";
     sqltran = sqltran + " RETURN ";
     sqltran = sqltran + " END CATCH";
-    console.log(sqltran)
+    //console.log(sqltran)
     return sqltran
         
 
@@ -144,4 +144,4 @@ var ascii = {
 
 
 }
-module.exports =ascii;
+module.exports =asciiqry;
